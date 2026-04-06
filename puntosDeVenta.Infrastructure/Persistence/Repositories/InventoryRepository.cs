@@ -49,5 +49,27 @@ namespace puntosDeVenta.Infrastructure.Persistence.Repositories
             }
 
         }
+
+        public async Task<bool> PosExistsAsync(int salesPointId)
+        {
+            try
+            {
+                using var connection = await OpenConnectionAsync();
+                using var command = new SqlCommand("SELECT TOP 1 1 FROM Inventario_POS WHERE pos_id = @Point_Id", connection)
+                {
+                    CommandType = CommandType.Text
+                };
+
+                command.Parameters.Add(CreateParameter("@Point_Id", salesPointId, SqlDbType.Int));
+
+                var result = await command.ExecuteScalarAsync();
+
+                return result != null;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
