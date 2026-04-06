@@ -8,17 +8,12 @@ namespace puntosDeVenta.Application.DTOs.Auth
         /// <summary>
         /// ID del punto de venta (ej: POS-015)
         /// </summary>
-        public string PosId { get; set; }
+        public string pos_id { get; set; }
 
         /// <summary>
         /// Nombre del punto de venta
         /// </summary>
-        public string PosName { get; set; }
-
-        /// <summary>
-        /// Duraci�n del token en minutos
-        /// </summary>
-        public int ExpirationMinutes { get; set; } = 480; // 8 horas
+        public string role { get; set; }
     }
 
     /// <summary>
@@ -30,6 +25,6 @@ namespace puntosDeVenta.Application.DTOs.Auth
         public string PosId { get; set; }
         public string PosName { get; set; }
         public DateTime ExpiresAt { get; set; }
-        public int ExpiresInSeconds { get; set; }
+        public String ExpiresInSeconds { get; set; }
     }
 }

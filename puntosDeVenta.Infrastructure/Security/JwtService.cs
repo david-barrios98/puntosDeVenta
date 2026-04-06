@@ -28,15 +28,16 @@ namespace puntosDeVenta.Shared.Helper
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Role, "pos_client"),
-                new Claim("pos_id", request.PosId),
-                new Claim("pos_name", request.PosName ?? $"Punto de Venta {request.PosId}"),
+                new Claim("pos_id", request.pos_id),
+                new Claim("pos_name", request.role ?? $"Punto de Venta {request.pos_id}"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expirationTime = DateTime.UtcNow.AddMinutes(request.ExpirationMinutes);
+            var expiryMinutes = int.Parse(jwtSettings["ExpiryInMinutes"]);
+            var expirationTime = DateTime.UtcNow.AddMinutes(expiryMinutes);
 
             var token = new JwtSecurityToken(
                 issuer: jwtSettings["Issuer"],
@@ -51,10 +52,10 @@ namespace puntosDeVenta.Shared.Helper
             return new TokenResponseDTO
             {
                 Token = tokenString,
-                PosId = request.PosId,
-                PosName = request.PosName,
+                PosId = request.pos_id,
+                PosName = request.role,
                 ExpiresAt = expirationTime,
-                ExpiresInSeconds = request.ExpirationMinutes * 60
+                ExpiresInSeconds = expirationTime.ToString()
             };
         }
 
