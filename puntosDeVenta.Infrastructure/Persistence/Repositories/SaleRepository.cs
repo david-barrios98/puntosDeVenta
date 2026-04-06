@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace puntosDeVenta.Infrastructure.Persistence.Repositories
 {
-    public class SaleRepository : SqlConfigServer, ISaleRepository
+    public class SaleRepository : SqlConfigServer
     {
         public SaleRepository(IConfiguration configuration) : base(configuration) { }
 
@@ -24,7 +24,8 @@ namespace puntosDeVenta.Infrastructure.Persistence.Repositories
             command.Parameters.Add(new SqlParameter("@PosId", SqlDbType.NVarChar, 20) { Value = request.pos_id });
             command.Parameters.Add(new SqlParameter("@CashierId", SqlDbType.NVarChar, 20) { Value = request.cashier_id });
             command.Parameters.Add(new SqlParameter("@SaleDate", SqlDbType.DateTime2) { Value = request.sale_date });
-            command.Parameters.Add(new SqlParameter("@TotalAmount", SqlDbType.Decimal) { Value = request.total_amount, Precision = 18, Scale = 2 });
+            var totalParam = new SqlParameter("@TotalAmount", SqlDbType.Decimal) { Precision = 18, Scale = 2, Value = request.total_amount };
+            command.Parameters.Add(totalParam);
 
             var itemsJson = JsonSerializer.Serialize(request.items);
             command.Parameters.Add(new SqlParameter("@ItemsJson", SqlDbType.NVarChar, -1) { Value = itemsJson });

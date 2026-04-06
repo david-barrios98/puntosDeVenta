@@ -409,3 +409,66 @@
 2026-04-06 11:28:06.3389 Info Executed action puntosDeVenta.Api.Controllers.v1.Auth.AuthController.GeneratePosToken (puntosDeVenta.Api) in 463.3314ms 
 2026-04-06 11:28:06.3389 Info Executed endpoint 'puntosDeVenta.Api.Controllers.v1.Auth.AuthController.GeneratePosToken (puntosDeVenta.Api)' 
 2026-04-06 11:28:06.3389 Info Request finished HTTP/2 POST https://localhost:7292/api/v1/auth/token application/json 44 - 200 - application/json;+charset=utf-8 823.2318ms 
+2026-04-06 12:52:11.2733 Debug Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2026-04-06 12:52:11.5060 Debug Hosting starting 
+2026-04-06 12:52:11.6634 Info User profile is available. Using 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2026-04-06 12:52:11.6873 Debug Reading data from file 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys\key-0edea24f-3bbe-417e-80d5-252e406c5d8b.xml'. 
+2026-04-06 12:52:11.7318 Debug Reading data from file 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys\key-37af4de8-74f6-4803-b9d5-1317575522f8.xml'. 
+2026-04-06 12:52:11.7318 Debug Reading data from file 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys\key-48499573-361f-48d1-adf8-f3fe1a60b288.xml'. 
+2026-04-06 12:52:11.7318 Debug Reading data from file 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys\key-4b692e9b-e6a0-44f3-9c8e-51657ece6d09.xml'. 
+2026-04-06 12:52:11.7318 Debug Reading data from file 'C:\Users\david\AppData\Local\ASP.NET\DataProtection-Keys\key-5f3107d2-687c-4c05-8b50-704899c75234.xml'. 
+2026-04-06 12:52:11.7655 Debug Found key {0edea24f-3bbe-417e-80d5-252e406c5d8b}. 
+2026-04-06 12:52:11.7655 Debug Found key {37af4de8-74f6-4803-b9d5-1317575522f8}. 
+2026-04-06 12:52:11.7655 Debug Found key {48499573-361f-48d1-adf8-f3fe1a60b288}. 
+2026-04-06 12:52:11.7655 Debug Found key {4b692e9b-e6a0-44f3-9c8e-51657ece6d09}. 
+2026-04-06 12:52:11.7655 Debug Found key {5f3107d2-687c-4c05-8b50-704899c75234}. 
+2026-04-06 12:52:11.8173 Debug Considering key {37af4de8-74f6-4803-b9d5-1317575522f8} with expiration date 2026-06-26 23:52:07Z as default key. 
+2026-04-06 12:52:11.8173 Debug Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-04-06 12:52:11.8298 Debug Decrypting secret element using Windows DPAPI. 
+2026-04-06 12:52:11.8298 Debug Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-04-06 12:52:11.8426 Debug Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2026-04-06 12:52:11.8426 Debug Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2026-04-06 12:52:11.8649 Debug Using key {37af4de8-74f6-4803-b9d5-1317575522f8} as the default key. 
+2026-04-06 12:52:11.8649 Debug Key ring with default key {37af4de8-74f6-4803-b9d5-1317575522f8} was loaded during application startup. 
+2026-04-06 12:52:11.8821 Debug Middleware loaded 
+2026-04-06 12:52:11.8821 Debug Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16519 B). 
+2026-04-06 12:52:11.8821 Debug Middleware loaded. Script /_framework/blazor-hotreload.js (799 B). 
+2026-04-06 12:52:12.1668 Debug Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true 
+2026-04-06 12:52:12.3885 Debug Using development certificate: CN=localhost (Thumbprint: 4385D409C6F56B06A201D3A6E5232FBC2A91FFAA) 
+2026-04-06 12:52:12.5261 Info Now listening on: https://localhost:7292 
+2026-04-06 12:52:12.5261 Info Now listening on: http://localhost:5179 
+2026-04-06 12:52:12.5261 Debug Loaded hosting startup assembly puntosDeVenta.Api 
+2026-04-06 12:52:12.5261 Debug Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery 
+2026-04-06 12:52:12.5261 Debug Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2026-04-06 12:52:12.5261 Debug Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2026-04-06 12:52:12.6668 Info Application started. Press Ctrl+C to shut down. 
+2026-04-06 12:52:12.6668 Info Hosting environment: Development 
+2026-04-06 12:52:12.6668 Info Content root path: C:\inversisA\Archivo\puntosDeVenta\puntosDeVenta.Api\ 
+2026-04-06 12:52:12.6668 Debug Hosting started 
+2026-04-06 12:52:12.7542 Debug Connection id "0HNKK0KTOAU2C" received FIN. 
+2026-04-06 12:52:12.7542 Debug Connection id "0HNKK0KTOAU2C" accepted. 
+2026-04-06 12:52:12.7542 Debug Connection id "0HNKK0KTOAU2C" started. 
+2026-04-06 12:52:12.8185 Debug Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, Boolean isApm, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2026-04-06 12:52:12.9864 Debug Connection id "0HNKK0KTOAU2C" stopped. 
+2026-04-06 12:52:12.9864 Debug Connection id "0HNKK0KTOAU2C" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-04-06 12:52:14.5220 Debug Connection id "0HNKK0KTOAU2D" accepted. 
+2026-04-06 12:52:14.5220 Debug Connection id "0HNKK0KTOAU2D" started. 
+2026-04-06 12:52:14.7827 Debug Connection 0HNKK0KTOAU2D established using the following protocol: Tls13 
+2026-04-06 12:52:15.0609 Info Request starting HTTP/2 GET https://localhost:7292/swagger/index.html - - 
+2026-04-06 12:52:15.6405 Debug Wildcard detected, all requests with hosts will be allowed. 
+2026-04-06 12:52:15.8646 Debug Response markup is scheduled to include Browser Link script injection. 
+2026-04-06 12:52:15.8747 Debug Response markup is scheduled to include browser refresh script injection. 
+2026-04-06 12:52:15.9468 Debug Response markup was updated to include Browser Link script injection. 
+2026-04-06 12:52:15.9468 Debug Response markup was updated to include browser refresh script injection. 
+2026-04-06 12:52:15.9618 Info Request finished HTTP/2 GET https://localhost:7292/swagger/index.html - - - 200 - text/html;charset=utf-8 946.2320ms 
+2026-04-06 12:52:16.0245 Info Request starting HTTP/2 GET https://localhost:7292/_framework/aspnetcore-browser-refresh.js - - 
+2026-04-06 12:52:16.0498 Debug Script injected: /_framework/aspnetcore-browser-refresh.js 
+2026-04-06 12:52:16.0498 Info Request finished HTTP/2 GET https://localhost:7292/_framework/aspnetcore-browser-refresh.js - - - 200 16519 application/javascript;+charset=utf-8 26.1935ms 
+2026-04-06 12:52:16.1756 Info Request starting HTTP/2 GET https://localhost:7292/_vs/browserLink - - 
+2026-04-06 12:52:16.3719 Info Request finished HTTP/2 GET https://localhost:7292/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 196.1978ms 
+2026-04-06 12:52:16.5305 Info Request starting HTTP/2 GET https://localhost:7292/swagger/v1/swagger.json - - 
+2026-04-06 12:52:16.5694 Info Request finished HTTP/2 GET https://localhost:7292/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.9167ms 

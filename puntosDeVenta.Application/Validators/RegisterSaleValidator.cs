@@ -32,7 +32,7 @@ namespace puntosDeVenta.Application.Validators
             RuleFor(x => x)
                 .Custom((dto, context) =>
                 {
-                    decimal calculatedTotal = dto.Items.Sum(i => i.Quantity * i.UnitPrice);
+                    decimal calculatedTotal = dto.Items.Sum(i => i.quantity * i.unit_price);
                     if (Math.Abs(calculatedTotal - dto.TotalAmount) > 0.01m)
                     {
                         context.AddFailure("TotalAmount", 
@@ -46,13 +46,13 @@ namespace puntosDeVenta.Application.Validators
     {
         public SaleItemValidator()
         {
-            RuleFor(x => x.ProductId)
+            RuleFor(x => x.producto_id)
                 .GreaterThan(0).WithMessage("ProductId debe ser mayor a 0");
 
-            RuleFor(x => x.Quantity)
+            RuleFor(x => x.quantity)
                 .GreaterThan(0).WithMessage("Quantity debe ser mayor a 0");
 
-            RuleFor(x => x.UnitPrice)
+            RuleFor(x => x.unit_price)
                 .GreaterThan(0).WithMessage("UnitPrice debe ser mayor a 0");
         }
     }

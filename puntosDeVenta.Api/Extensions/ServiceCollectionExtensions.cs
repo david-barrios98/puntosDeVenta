@@ -42,15 +42,8 @@ public static class ServiceCollectionExtensions
         // ============== MESSAGE PUBLISHER ==============
         // Detectar si usamos RabbitMQ real o mock
         var useRealRabbitMq = configuration.GetValue<bool>("UseRealRabbitMq", false);
+        services.AddScoped<IMessagePublisher, MockMessagePublisher>();
 
-        if (useRealRabbitMq)
-        {
-            services.AddScoped<IMessagePublisher, RabbitMqPublisher>();
-        }
-        else
-        {
-            services.AddScoped<IMessagePublisher, MockMessagePublisher>();
-        }
 
         return services;
     }

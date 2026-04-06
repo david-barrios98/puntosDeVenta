@@ -33,14 +33,14 @@ namespace puntosDeVenta.Application.UseCases
         public async Task<SaleRegisteredEventDTO> ExecuteAsync(RegisterSaleDTO sale)
         {
             // Validación de estructura y cálculos
-            var validationResult = await _validator.ValidateAsync(sale);
+            var validationResult = await _validator.ValidateAsync(sale).ConfigureAwait(false);
             if (!validationResult.IsValid)
             {
                 throw new ValidationException(validationResult.Errors);
             }
 
             // 1. Registrar en BD (con transacción en SP)
-            var saleId = await _repository.RegisterSaleAsync(sale);
+            var saleId = await _repository.RegisterSaleAsync(sale).ConfigureAwait(false);
 
             // 2. Crear evento de dominio
             var @event = new SaleRegisteredEventDTO
@@ -52,8 +52,18 @@ namespace puntosDeVenta.Application.UseCases
             };
 
             // 3. Publicar evento (asíncrono, no bloquea respuesta del POS)
-            // Ejecutar sin await para no bloquear
-            _ = _messagePublisher.PublishSaleRegisteredAsync(@event).ConfigureAwait(false);
+            // Publicación en background y manejo de errores con logging
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await _messagePublisher.PublishSaleRegisteredAsync(@event).ConfigureAwait(false);
+                }
+                catch (Exception ex)
+                {
+                    // No revertir la venta por fallo en la mensajería — solo loguear
+                }
+            });
 
             // 4. Retornar evento al POS inmediatamente
             return @event;

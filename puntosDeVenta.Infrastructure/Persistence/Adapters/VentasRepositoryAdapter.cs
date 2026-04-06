@@ -24,9 +24,9 @@ namespace puntosDeVenta.Infrastructure.Persistence.Adapters
 
             var itemsJson = JsonSerializer.Serialize(sale.Items.Select(i => new
             {
-                i.ProductId,
-                i.Quantity,
-                i.UnitPrice
+                i.producto_id,
+                i.quantity,
+                i.unit_price
             }).ToList());
 
             var parameters = new SqlParameter[]
