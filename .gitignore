@@ -1,0 +1,75 @@
+# ** .NET Core / .NET 5+ ** #
+##############################
+
+# Binaries and object files
+**/bin/
+**/obj/
+**/out/
+*.dll
+*.exe
+*.so
+*.dylib
+*.pdb
+*.lib
+*.tmp
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.csproj.user
+*.csproj.lock
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# IDE and Editor folders
+.vscode/
+.idea/
+*.swp
+
+# Build results
+#*.csproj
+*.suo
+*.user
+#*.sln
+*.suo
+*.vs/
+*.vscode/
+*.idea/
+
+# MacOS Finder
+.DS_Store
+
+# Windows System files
+Thumbs.db
+Desktop.ini
+
+# NPM packages
+node_modules/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# JetBrains Rider
+.idea/
+
+# Local History for JetBrains Rider
+.idea/.idea/
+.idea/.localhistory/
+
+# Optional NuGet packages directory
+.nuget/
+
+# Coverage reports
+coverage/
+
+# Local DB files
+*.mdf
+*.
